@@ -1,11 +1,11 @@
-"""Tests for the DWDM link-minimization heuristic."""
+"""Tests for the redundant-topology link-minimization heuristic."""
 
 import copy
 
 import pytest
 
-from dwdm_optimizer import DWDMNetworkOptimizer, count_links
-from dwdm_optimizer.dijkstra import dijkstra
+from redundant_topology import RedundantTopologyOptimizer, count_links
+from redundant_topology.dijkstra import dijkstra
 
 
 def make_ring():
@@ -20,7 +20,7 @@ def make_ring():
 
 @pytest.fixture
 def optimizer():
-    return DWDMNetworkOptimizer()
+    return RedundantTopologyOptimizer()
 
 
 def test_input_graph_is_not_mutated(optimizer):

@@ -1,10 +1,12 @@
-"""Heuristic link minimizer for DWDM optical network topologies.
+"""Heuristic designer for minimal, redundant network topologies.
 
-Given a weighted, undirected graph that models every *possible* fiber link
-between nodes, the heuristic selects a smaller set of links such that every
-pair of nodes is still connected by **two** routes (so the network survives a
-single link failure). See the project README for the rationale and the
-step-by-step description of the heuristic.
+Given a weighted, undirected graph that models every *possible* link between
+nodes, the heuristic selects a smaller set of links such that every pair of
+nodes is still connected by **two** independent routes (so the network survives
+a single link failure). It is domain-agnostic: the nodes and weights can model
+fiber/optical links, roads, power lines, pipelines, logistics routes, or any
+other weighted network. See the README for the rationale and the step-by-step
+description of the heuristic.
 """
 
 from __future__ import annotations
@@ -31,8 +33,8 @@ def _natural_key(node: Hashable):
     return (0, int(text)) if text.isdigit() else (1, text)
 
 
-class DWDMNetworkOptimizer:
-    """Select a minimal, redundant set of links for a DWDM topology."""
+class RedundantTopologyOptimizer:
+    """Select a minimal, redundant set of links for a network topology."""
 
     def optimize(self, graph: Graph) -> Dict[Hashable, Dict[Hashable, Number]]:
         """Return an optimized, weighted topology ``{node: {neighbor: weight}}``.

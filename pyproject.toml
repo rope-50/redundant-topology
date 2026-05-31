@@ -3,20 +3,20 @@ requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "dwdm-network-optimizer"
-version = "1.0.0"
-description = "Heuristic link minimization for redundant DWDM optical network topologies"
+name = "redundant-topology"
+version = "2.0.0"
+description = "Heuristic designer for minimal, redundant network topologies on any weighted graph"
 readme = "README.md"
 requires-python = ">=3.8"
 license = { text = "MIT" }
-keywords = ["dwdm", "optical-network", "graph", "dijkstra", "network-topology", "heuristic"]
+keywords = ["graph", "dijkstra", "network-topology", "survivable-network", "redundancy", "heuristic"]
 dependencies = []
 
 [project.optional-dependencies]
 dev = ["pytest>=7"]
 
 [tool.setuptools]
-packages = ["dwdm_optimizer"]
+packages = ["redundant_topology"]
 
 [tool.pytest.ini_options]
 pythonpath = ["."]

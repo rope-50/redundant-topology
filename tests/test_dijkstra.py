@@ -2,7 +2,7 @@
 
 import pytest
 
-from dwdm_optimizer.dijkstra import dijkstra, shortest_path
+from redundant_topology.dijkstra import dijkstra, shortest_path
 
 # A->B 1, B->C 2, A->C 4. Cheapest A->C is A-B-C (cost 3), not the direct edge.
 TRIANGLE = {
