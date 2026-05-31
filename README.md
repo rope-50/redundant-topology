@@ -1,7 +1,7 @@
 # DWDM Network Optimizer
 
 A heuristic that reduces the number of fiber links in a **DWDM optical network**
-while keeping the network **redundant** — every pair of nodes stays connected by
+while keeping the network **redundant** - every pair of nodes stays connected by
 two routes, so the network survives any single link failure.
 
 ## Background
@@ -11,7 +11,7 @@ lets a single fiber carry many independent channels at once, each on a different
 wavelength of light. It is the backbone of long-haul and metro telecom networks.
 
 Laying fiber is expensive, so a network operator wants to deploy **as few links
-as possible** — but not so few that a single cut isolates part of the network.
+as possible** - but not so few that a single cut isolates part of the network.
 The sweet spot is a topology that is *minimal* yet *2-connected*: between any two
 nodes there are two independent routes.
 
@@ -43,7 +43,7 @@ is deterministic). The returned graph reports the **original** link weights.
 
 ## Install
 
-No third-party dependencies are required to use the optimizer — only Python 3.8+.
+No third-party dependencies are required to use the optimizer - only Python 3.8+.
 
 ```bash
 git clone https://github.com/rope-50/DWDM-Network-Optimizer.git
